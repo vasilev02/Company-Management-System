@@ -1,62 +1,74 @@
 <main>
   <article class="sign-up-wrapper">
     <section class="register-wrapper">
-      <section class="register">
-        <h2 class="register-title">ACCOUNT REGISTER</h2>
-        <form action="">
-          <label for="username">
-            <i class="far fa-user"></i>
-            <input
-              id="username"
-              type="text"
-              required=""
-              placeholder="Full name"
-            />
-          </label>
+      <section class="sign-up-image-wrapper">
+        <img
+          src="https://res.cloudinary.com/defiefioi/image/upload/v1627120085/CMS/Daco_4122497_adcp28.png"
+          alt="Building Blocks"
+        />
+      </section>
+      <section class="register-account-wrapper">
+        <section class="register">
+          <h2 class="register-title">ACCOUNT REGISTER</h2>
+          <form action="">
+            <label for="username">
+              <i class="far fa-user"></i>
+              <input
+                id="username"
+                type="text"
+                required=""
+                placeholder="Full name"
+              />
+            </label>
 
-          <label for="position">
-            <i class="fas fa-briefcase"></i>
-            <input
-              id="position"
-              type="text"
-              required=""
-              placeholder="Position"
-            />
-          </label>
+            <label for="position">
+              <i class="fas fa-briefcase"></i>
+              <input
+                id="position"
+                type="text"
+                required=""
+                placeholder="Position"
+              />
+            </label>
 
-          <label for="department">
-            <i class="fas fa-building"></i>
-            <input
-              id="department"
-              type="text"
-              required=""
-              placeholder="Department"
-            />
-          </label>
+            <label for="department">
+              <i class="fas fa-building"></i>
+              <input
+                id="department"
+                type="text"
+                required=""
+                placeholder="Department"
+              />
+            </label>
 
-          <label for="salary">
-            <i class="fas fa-money-bill-alt"></i>
-            <input id="salary" type="number" required="" placeholder="Salary" />
-          </label>
+            <label for="salary">
+              <i class="fas fa-money-bill-alt"></i>
+              <input
+                id="salary"
+                type="number"
+                required=""
+                placeholder="Salary"
+              />
+            </label>
 
-          <label for="email">
-            <i class="fas fa-at"></i>
-            <input id="email" type="email" required="" placeholder="Email" />
-          </label>
+            <label for="email">
+              <i class="fas fa-at"></i>
+              <input #emailInput id="email" type="email" required="" placeholder="Email" />
+            </label>
 
-          <label for="password">
-            <i class="fas fa-lock"></i>
-            <input
-              id="password"
-              type="password"
-              required=""
-              placeholder="Password"
-            />
-          </label>
+            <label for="password">
+              <i class="fas fa-lock"></i>
+              <input #passwordInput
+                id="password"
+                type="password"
+                required=""
+                placeholder="Password"
+              />
+            </label>
 
-          <button class="btn">Sign Up</button>
-        </form>
-
+            <button (click)="onRegister(emailInput.value, passwordInput.value)" class="btn">Sign Up</button>
+          </form>
+        </section>
         <section class="no-account">
           <p>
             Already have an account ?

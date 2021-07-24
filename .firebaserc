@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "company-management-syste-36d5a": {
+      "hosting": {
+        "Company-Management-Project": [
+          "company-management-syste-36d5a"
+        ]
+      }
+    }
+  }
+}

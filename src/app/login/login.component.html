@@ -13,6 +13,7 @@
           <label for="username">
             <i class="far fa-user"></i>
             <input
+              #emailInput
               id="username"
               type="text"
               required=""
@@ -23,6 +24,7 @@
           <label for="password">
             <i class="fas fa-lock"></i>
             <input
+              #passwordInput
               id="password"
               type="password"
               required=""
@@ -30,7 +32,12 @@
             />
           </label>
 
-          <button class="btn">Sign In</button>
+          <button
+            (click)="onLogin(emailInput.value, passwordInput.value)"
+            class="btn"
+          >
+            Sign In
+          </button>
         </form>
       </section>
       <section class="no-account">

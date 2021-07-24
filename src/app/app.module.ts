@@ -8,6 +8,14 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { FormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { Router, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +28,16 @@ import { AboutComponent } from './about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    NoopAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    RouterModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

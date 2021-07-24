@@ -1,21 +1,24 @@
 <nav class="navigation">
   <section class="navigation-logo">
     <a href="/">
-      <img src="https://res.cloudinary.com/defiefioi/image/upload/v1627043564/CMS/logo_qe17lx.png" alt="Logo" />
+      <img
+        src="https://res.cloudinary.com/defiefioi/image/upload/v1627043564/CMS/logo_qe17lx.png"
+        alt="Logo"
+      />
     </a>
   </section>
   <ul class="navigation-list">
-    <li>
+    <li *ngIf="!isLoggedIn">
       <a href="/login">Sign In</a>
     </li>
     <li>
-      <a href="/register">Sign Up</a>
+      <a *ngIf="!isLoggedIn" href="/register">Sign Up</a>
     </li>
     <li>
       <a href="/about">About</a>
     </li>
-    <li>
-      <a href="/">Log out</a>
+    <li *ngIf="isLoggedIn">
+      <a href="/" (click)="logout()">Log out</a>
     </li>
   </ul>
 </nav>

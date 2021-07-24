@@ -1,11 +1,7 @@
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
   margin: 0px;
-  min-height: 100vh;
-  background-image: url('https://res.cloudinary.com/defiefioi/image/upload/v1627112410/CMS/register-people_gqop5r.png');
+  min-height: 97vh;
+  background-image: url("https://res.cloudinary.com/defiefioi/image/upload/v1627117714/CMS/login-background_pyj7qg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -18,11 +14,17 @@ main {
 }
 
 .sign-up-image-wrapper {
-  max-width: 400px;
+  max-width: 650px;
 }
 
 .sign-up-image-wrapper img {
   width: 100%;
+}
+
+.register-account-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .register {
@@ -41,8 +43,9 @@ main {
 
 .register-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 i {
@@ -102,7 +105,6 @@ button:hover {
 }
 
 .inner-text {
-  color: white;
   text-decoration: underline;
 }
 
@@ -111,6 +113,13 @@ button:hover {
   cursor: pointer;
 }
 
-.no-account{
-  color: white;
+.no-account p {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 980px) {
+  .sign-up-image-wrapper {
+    order: 1;
+    margin-top: 10px;
+  }
 }

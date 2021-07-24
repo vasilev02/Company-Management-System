@@ -25,6 +25,10 @@ footer {
   font-size: 50px;
 }
 
+.footer-credentials-links a{
+  color: #468bcc;
+}
+
 .footer-credentials-links i:hover {
   color: #ff9f00;
   cursor: pointer;
