@@ -1,0 +1,116 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
+  background-image: url('https://res.cloudinary.com/defiefioi/image/upload/v1627112410/CMS/register-people_gqop5r.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sign-up-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-image-wrapper {
+  max-width: 400px;
+}
+
+.sign-up-image-wrapper img {
+  width: 100%;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #468bcc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.5);
+}
+
+.register {
+  max-width: 580px;
+  text-align: center;
+}
+
+.register-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+i {
+  color: #999999;
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  right: 25px;
+}
+
+input {
+  color: #d41872;
+  border: none;
+}
+
+.register-title {
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 0px;
+  border-radius: 6px;
+  align-items: center;
+  border: 3px solid #468bcc;
+}
+
+label {
+  padding-top: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-bottom: 1px solid lightgray;
+}
+
+button {
+  color: white;
+  background: #ff9f00;
+  border: none;
+  font-size: 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 8px 30px;
+  margin: 15px;
+}
+
+button:hover {
+  background: #468bcc;
+
+  cursor: pointer;
+}
+
+.inner-text {
+  color: white;
+  text-decoration: underline;
+}
+
+.inner-text:hover {
+  color: #ff9f00;
+  cursor: pointer;
+}
+
+.no-account{
+  color: white;
+}
