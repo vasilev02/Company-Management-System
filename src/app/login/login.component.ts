@@ -26,6 +26,14 @@ export class LoginComponent implements OnInit {
     const user: IUser = {email, password}
     await this.authService.login(user);
 
+
+
+
+
+
+
+
+    
     if (this.authService.isLoggedIn) {
       this.isLoggedIn = true;      
       this.router.navigate(['/']);
