@@ -1,6 +1,6 @@
 <nav class="navigation">
   <section class="navigation-logo">
-    <a href="/">
+    <a routerLink="/">
       <img
         src="https://res.cloudinary.com/defiefioi/image/upload/v1627043564/CMS/logo_qe17lx.png"
         alt="Logo"
@@ -9,16 +9,16 @@
   </section>
   <ul class="navigation-list">
     <li *ngIf="!isLoggedIn">
-      <a href="/login">Sign In</a>
+      <a routerLink="/login">Sign In</a>
     </li>
     <li>
-      <a *ngIf="!isLoggedIn" href="/register">Sign Up</a>
+      <a *ngIf="!isLoggedIn" routerLink="/register">Sign Up</a>
     </li>
     <li>
-      <a href="/about">About</a>
+      <a routerLink="/about">About</a>
     </li>
     <li *ngIf="isLoggedIn">
-      <a href="/" (click)="logout()">Log out</a>
+      <a routerLink="/" (click)="logout()">Log out</a>
     </li>
   </ul>
 </nav>

@@ -109,6 +109,29 @@
   cursor: pointer;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home h2 {
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.inner-text{
+  color: #E94F08;
+}
+
+.home-image-wrapper {
+  max-width: 700px;
+}
+
+.home-image-wrapper img {
+  width: 100%;
+}
+
 
 @media screen and (max-width: 1200px) {
   .site-header-image-wrapper img {
@@ -126,12 +149,18 @@
 }
 
 @media screen and (max-width: 750px) {
+  .home h2 {
+    font-size: 20px;
+  }
   .site-header-image-wrapper img {
     width: 95%;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .home h2 {
+    font-size: 15px;
+  }
   .title-size {
     font-size: 15px;
   }

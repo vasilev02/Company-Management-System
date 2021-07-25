@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { Router, RouterModule } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { Router, RouterModule } from '@angular/router';
     RouterModule,
     RouterModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
