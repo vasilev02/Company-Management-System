@@ -2,6 +2,11 @@ head {
   position: relative;
 }
 
+div{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .navigation {
   display: flex;
   position: sticky;

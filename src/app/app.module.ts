@@ -17,6 +17,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from './services/auth.service';
+import { AboutUserComponent } from './about-user/about-user.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AuthService } from './services/auth.service';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    AboutUserComponent
   ],
   imports: [
     BrowserModule,

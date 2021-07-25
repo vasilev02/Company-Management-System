@@ -8,17 +8,23 @@
     </a>
   </section>
   <ul class="navigation-list">
-    <li *ngIf="!isLoggedIn">
-      <a routerLink="/login">Sign In</a>
-    </li>
-    <li>
-      <a *ngIf="!isLoggedIn" routerLink="/register">Sign Up</a>
-    </li>
-    <li>
-      <a routerLink="/about">About</a>
+    <li *ngIf="isLoggedIn">
+      <a routerLink="/user-about">My info</a>
     </li>
     <li *ngIf="isLoggedIn">
       <a routerLink="/" (click)="logout()">Log out</a>
+    </li>
+
+    <li *ngIf="!isLoggedIn">
+      <a routerLink="/login">Sign In</a>
+    </li>
+
+    <li *ngIf="!isLoggedIn">
+      <a routerLink="/register">Sign Up</a>
+    </li>
+
+    <li *ngIf="!isLoggedIn">
+      <a routerLink="/about">About</a>
     </li>
   </ul>
 </nav>
