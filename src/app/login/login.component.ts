@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { IUser } from '../shared/interfaces';
+import { AngularFirestore, AngularFirestoreCollectionGroup } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-login',
@@ -26,14 +27,6 @@ export class LoginComponent implements OnInit {
     const user: IUser = {email, password}
     await this.authService.login(user);
 
-
-
-
-
-
-
-
-    
     if (this.authService.isLoggedIn) {
       this.isLoggedIn = true;      
       this.router.navigate(['/']);

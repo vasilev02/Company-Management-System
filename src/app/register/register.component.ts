@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
-import { IUser } from '../shared/interfaces';
+import { IUser, IUserRegister } from '../shared/interfaces';
 
 @Component({
   selector: 'app-register',
@@ -29,8 +29,15 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  async onRegister(email: string, password: string) {
-    const user: IUser = { email, password };
+  async onRegister(
+    fullName: string,
+    position: string,
+    department: string,
+    salary: string,
+    email: string,
+    password: string
+  ) {
+    const user: IUserRegister = { fullName, position, department, salary, email, password };
     await this.authService.register(user);
 
     if (this.authService.isLoggedIn) {
