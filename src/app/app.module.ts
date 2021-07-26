@@ -18,6 +18,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from './services/auth.service';
 import { AboutUserComponent } from './about-user/about-user.component';
+import { WorkersComponent } from './workers/workers.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AboutUserComponent } from './about-user/about-user.component';
     RegisterComponent,
     HomeComponent,
     AboutComponent,
-    AboutUserComponent
+    AboutUserComponent,
+    WorkersComponent
   ],
   imports: [
     BrowserModule,

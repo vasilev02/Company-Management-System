@@ -2,7 +2,6 @@ import { Injectable, Output, EventEmitter } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { IUser, IUserRegister } from '../shared/interfaces';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { stringify } from '@angular/compiler/src/util';
 
 @Injectable({
   providedIn: 'root',

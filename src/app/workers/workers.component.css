@@ -1,0 +1,80 @@
+.take-part {
+    background: #66b9f8;
+    padding: 20px 30px;
+    color: white;
+    text-align: center;
+    border-top: 10px solid #92cdfb;
+    border-bottom: 10px solid #CEE9FA;
+  }
+  
+  .take-part:hover{
+    border-bottom: 10px solid #92cdfb;
+    border-top: 10px solid #CEE9FA;
+  }
+  
+  .take-part form{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .take-part form input {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+  
+  .take-part form input::placeholder {
+    color: white;
+  }
+  
+  .take-part form button {
+    background: #ff9100;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    padding: 10px 15px;
+    margin-left: 30px;
+    box-shadow: 0px 5px 11px -4px #000000;
+    cursor: pointer;
+  }
+  
+  .take-part form button:hover {
+    background: white;
+    color: #468bcc;
+    cursor: pointer;
+  }
+  
+  .lectors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .lector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .lector h2{
+    margin-bottom: 0px;
+  }
+  
+  .lector-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid grey;
+    margin: 0px 20px;
+  }
+  
+  .lector-img:hover{
+    box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.5);
+    border: 6px solid #ff9100;
+  }
+  
