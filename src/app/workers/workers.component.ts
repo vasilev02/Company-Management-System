@@ -10,6 +10,7 @@ import { User } from '../shared/user.model';
 export class WorkersComponent implements OnInit {
 
   list!: User[];
+  searchText : string = '';
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
@@ -21,6 +22,10 @@ export class WorkersComponent implements OnInit {
         }
       })
     })
+  }
+
+  filterCondition(user: User){
+    return user.fullName.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1;
   }
 
 }

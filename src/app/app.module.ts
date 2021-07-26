@@ -10,9 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ReactiveFormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
-import { FormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { Router, RouterModule } from '@angular/router';
@@ -42,7 +44,8 @@ import { WorkersComponent } from './workers/workers.component';
     AppRoutingModule,
     FormsModule,
     RouterModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
