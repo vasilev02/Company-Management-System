@@ -21,6 +21,7 @@ import { Router, RouterModule } from '@angular/router';
 import { AuthService } from './services/auth.service';
 import { AboutUserComponent } from './about-user/about-user.component';
 import { WorkersComponent } from './workers/workers.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { WorkersComponent } from './workers/workers.component';
     HomeComponent,
     AboutComponent,
     AboutUserComponent,
-    WorkersComponent
+    WorkersComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,

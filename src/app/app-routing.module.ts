@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { AboutUserComponent } from './about-user/about-user.component';
 import { WorkersComponent } from './workers/workers.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -15,7 +16,7 @@ const routes: Routes = [
   { path: 'worker/:id', component: AboutUserComponent },
   { path: 'myinfo/:id', component: AboutUserComponent },
   { path: 'workers', component: WorkersComponent },
-  { path: '**', component: HomeComponent },
+  { path: '**', component: NotFoundPageComponent },
 ];
 
 @NgModule({
