@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
       this.isLoggedIn = true;
       localStorage.setItem('email',email)
       this.router.navigate(['/']);
+      
     }
 
   }

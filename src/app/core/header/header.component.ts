@@ -35,19 +35,16 @@ export class HeaderComponent implements OnInit {
   }
 
   myInfoDetails() {
-    
     this.userService.getUsers().subscribe((actionArray) => {
       actionArray.map((item) => {
         let currentUser: any = item.payload.doc.data();
 
         if (currentUser['email'] === localStorage.getItem('email')) {
           this.userData = currentUser;
-          console.log(this.userData)
+          this.router.navigate(['worker/' + this.userData.uniqueId]);
         }
       });
     });
-    
-    this.router.navigate(['myinfo/' + this.userData.uniqueId]);
   }
 
   logout(): void {

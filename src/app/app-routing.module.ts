@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'worker/:id', component: AboutUserComponent },
   { path: 'myinfo/:id', component: AboutUserComponent },
   { path: 'workers', component: WorkersComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({

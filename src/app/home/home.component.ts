@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
   isLoggedIn: boolean = localStorage.getItem('user') ? true : false;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
     if (this.isLoggedIn) {
@@ -24,7 +25,7 @@ export class HomeComponent implements OnInit {
 
           if (currentUser['email'] === localStorage.getItem('email')) {
             this.userData = currentUser;
-            return;
+            this.router.navigate(['/']);
           }
         });
       });

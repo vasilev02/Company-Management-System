@@ -49,6 +49,7 @@ div{
 .navigation-list a:hover {
   color: #468bcc;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
