@@ -12,7 +12,7 @@
       <a routerLink="/workers">Workers</a>
     </li>
     <li *ngIf="isLoggedIn">
-      <a routerLink="/user-about">My info</a>
+      <a (click)=myInfoDetails()>My info</a>
     </li>
     <li *ngIf="isLoggedIn">
       <a routerLink="/" (click)="logout()">Log out</a>

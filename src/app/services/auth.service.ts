@@ -29,12 +29,15 @@ export class AuthService {
   async register(user: IUserRegister) {
     let id: string | undefined;
 
+    let email = user.email;
+
     await this.firebaseAuth
       .createUserWithEmailAndPassword(user.email, user.password)
       .then((response) => {
         this.isLoggedIn.emit(true);
         const user = JSON.stringify(response.user);
         localStorage.setItem('user', user);
+        localStorage.setItem('email', email);
         id = response.user!.uid;
       })
       .catch((error) => {
@@ -57,7 +60,6 @@ export class AuthService {
 
   logout() {
     this.firebaseAuth.signOut();
-    localStorage.removeItem('user');
   }
 
   getEmitter() {

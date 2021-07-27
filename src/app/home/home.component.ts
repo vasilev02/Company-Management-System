@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  userData={
+    fullName:'',
+    uniqueId:''
+  }
   isLoggedIn: boolean = localStorage.getItem('user') ? true : false;
-  constructor() {}
+
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    console.log(localStorage.getItem('email'))
+    if (this.isLoggedIn) {
+      this.userService.getUsers().subscribe((actionArray) => {
+        actionArray.map((item) => {
+
+          let currentUser:any  = item.payload.doc.data();
+
+          if (currentUser['email'] === localStorage.getItem('email')) {
+            this.userData = currentUser;
+            return;
+          }
+        });
+      });
+    }
   }
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../services/user.service';
-import { User } from '../shared/user.model';
 
 @Component({
   selector: 'app-about-user',
@@ -11,7 +10,14 @@ import { User } from '../shared/user.model';
 })
 export class AboutUserComponent implements OnInit {
   routeId!: any;
-  userData:any;
+  userData:any={
+    fullName:'',
+    email:'',
+    salary:'',
+    position:'',
+    department:'',
+    uniqueId:''
+  }
 
   constructor(
     private activatedRoute: ActivatedRoute,
