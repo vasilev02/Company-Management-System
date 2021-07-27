@@ -15,15 +15,16 @@
 <article class="lectors">
   <section *ngFor="let user of list" class="lector">
     <section class="inner-section-info" *ngIf="filterCondition(user)">
-        <img
+
+      <a (click)=detailsWorker(user.uniqueId)><img
         class="lector-img"
         src="https://res.cloudinary.com/defiefioi/image/upload/v1627120084/CMS/worker_duzozy.png"
         alt="Lector Image"
-      />
+      /></a>
+
       <h2>{{ user.fullName }}</h2>
       <p>{{ user.position }}</p>
-    </section>
       
-    
+    </section>
   </section>
 </article>
