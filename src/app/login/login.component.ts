@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { IUser } from '../shared/interfaces';
 import { AngularFirestore, AngularFirestoreCollectionGroup } from '@angular/fire/firestore';
 import { UserService } from '../services/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
 
   isLoggedIn: boolean = false;
 
-  constructor(public authService: AuthService, public router: Router, private userService: UserService) { }
+  constructor(public authService: AuthService, public router: Router, private userService: UserService
+    , private toastr: ToastrService) { }
 
   async onLogin(email: string, password: string) {
     const user: IUser = {email, password}
@@ -24,7 +26,7 @@ export class LoginComponent implements OnInit {
       this.isLoggedIn = true;
       localStorage.setItem('email',email)
       this.router.navigate(['/']);
-      
+      this.toastr.success("Logged successfully !","Login");
     }
 
   }

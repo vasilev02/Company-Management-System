@@ -60,6 +60,10 @@
     align-items: center;
   }
   
+  .inner-section-info{
+    width: 350px;
+  }
+
   .lector h2{
     margin-bottom: 0px;
   }
