@@ -22,6 +22,7 @@ import { AuthService } from './services/auth.service';
 import { AboutUserComponent } from './about-user/about-user.component';
 import { WorkersComponent } from './workers/workers.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     RouterModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -35,9 +35,20 @@
               <a href="#"><i class="fas fa-edit" aria-hidden="true"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fas fa-trash-alt" aria-hidden="true"></i></a>
+              <a (click)="deleteUser(userData.uniqueId)"><i class="fas fa-trash-alt" aria-hidden="true"></i></a>
             </li>
           </ul>
+        </div>
+        <div class="send_message">
+          <form
+          action="https://formsubmit.co/{{userData.email}}"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="{{userData.fullName}} just messaged you !" />
+          <input type="email" name="email" required  placeholder="{{loggedUserEmail}}" />
+          <input type="text" name="text" required placeholder="Message {{userData.fullName}}" />
+          <button type="submit">Send</button>
+        </form>
         </div>
       </div>
     </div>

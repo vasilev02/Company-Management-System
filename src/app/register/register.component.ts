@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
-import { IUser, IUserRegister } from '../shared/interfaces';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -9,17 +9,16 @@ import { IUser, IUserRegister } from '../shared/interfaces';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+
+  constructor(
+    public authService: AuthService,
+    public router: Router,
+    public userService: UserService
+  ) {}
+
   isLoggedIn: boolean = false;
-
-  constructor(public authService: AuthService, public router: Router) {}
-
-  passCheck(passElement: HTMLInputElement) {
-    if (passElement.type == 'password') {
-      passElement.type = 'text';
-    } else {
-      passElement.type = 'password';
-    }
-  }
+  submitted!:boolean;
+  formControls = this.userService.form.controls;
 
   ngOnInit(): void {
     if (localStorage.getItem('user') != null) {
@@ -29,17 +28,17 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  async onRegister(
-    fullName: string,
-    position: string,
-    department: string,
-    salary: string,
-    email: string,
-    password: string
-  ) {
-    const user: IUserRegister = { fullName, position, department, salary, email, password };
-    await this.authService.register(user);
+  onSubmit(){
+    this.submitted=true;
+    if(this.userService.form.valid){
+      let userData = this.userService.form.value;
+      this.onRegister(userData);
+      this.submitted=false;
+    }
+  }
 
+  async onRegister(userInputs:any) {
+    await this.authService.register(userInputs);
     if (this.authService.isLoggedIn) {
       this.isLoggedIn = true;
       this.router.navigate(['/']);
