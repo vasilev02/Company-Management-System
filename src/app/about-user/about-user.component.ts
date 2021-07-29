@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
@@ -27,7 +28,8 @@ export class AboutUserComponent implements OnInit {
     private fireStore: AngularFirestore,
     private fireAuth: AngularFireAuth,
     private userService: UserService,
-    private authService: AuthService
+    private authService: AuthService,
+    private route: Router
   ) {
     this.activatedRoute.params.subscribe((query) => {
       this.routeId = query.id;
@@ -43,6 +45,10 @@ export class AboutUserComponent implements OnInit {
         this.userData = response.data();
         this.loggedUserEmail = localStorage.getItem('email')
       });
+  }
+
+  updateWorker(uniqueId: string) {
+    this.route.navigate(['update-user/' + uniqueId]);
   }
 
   deleteUser(id: string) {

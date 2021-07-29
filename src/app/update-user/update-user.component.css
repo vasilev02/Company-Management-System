@@ -109,10 +109,20 @@ ul{
   font-size: 18px;
 }
 
-.wrapper .social_media ul li a:hover{
-  cursor: pointer;
-}
-
+button {
+    color: white;
+    background: #ff9f00;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 8px 30px;
+  }
+  
+  button:hover {
+    background: #468bcc;
+    cursor: pointer;
+  }
 
 @media screen and (max-width: 750px) {
   .info_data {

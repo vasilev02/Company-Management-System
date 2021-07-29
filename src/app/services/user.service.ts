@@ -1,8 +1,4 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestoreCollection } from '@angular/fire/firestore';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { User } from '../shared/user.model';
 import { FormGroup, FormControl, Validator, Validators } from '@angular/forms';
@@ -26,9 +22,22 @@ export class UserService {
     ]),
   });
 
+  formUpdate = new FormGroup({
+    uniqueId: new FormControl(''),
+    fullName: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    position: new FormControl('', Validators.required),
+    department: new FormControl('', Validators.required),
+    salary: new FormControl('', [Validators.required, Validators.min(1)]),
+  });
+
   constructor(private firestore: AngularFirestore) {}
 
   getUsers() {
     return this.firestore.collection('users').snapshotChanges();
+  }
+
+  updateUser(userData:any){
+    this.firestore.collection('users').doc(userData.uniqueId).update(userData);
   }
 }

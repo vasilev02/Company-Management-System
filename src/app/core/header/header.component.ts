@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
 
         if (currentUser['email'] === localStorage.getItem('email')) {
           this.userData = currentUser;
-          this.router.navigate(['worker/' + this.userData.uniqueId]);
+          this.router.navigate(['myinfo/' + this.userData.uniqueId]);
         }
       });
     });

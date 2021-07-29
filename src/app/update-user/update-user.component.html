@@ -1,0 +1,112 @@
+<article class="info-card">
+  <div class="wrapper">
+    <div class="left">
+      <img
+        src="https://res.cloudinary.com/defiefioi/image/upload/v1627541853/CMS/laptop-edit_gc0s5j.png"
+        alt="Settings"
+        width="150"
+      />
+    </div>
+    <div class="right">
+      <div class="info">
+        <h3>Update information</h3>
+
+        <form [formGroup]="this.userService.formUpdate" (submit)="onUpdate()">
+          <div class="info_data">
+            <div class="data">
+              <h4>Full name</h4>
+              <input
+                type="text"
+                name="fullName"
+                formControlName="fullName"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': submitted && formControls.fullName.errors
+                }"
+                placeholder="Full name"
+              />
+              <div *ngIf="submitted && formControls.fullName.errors" class="validation-error">
+                Full name is required
+              </div>
+            </div>
+          </div>
+
+          <div class="info_data">
+            <div class="data">
+              <h4>Email</h4>
+              <input
+                type="text"
+                name="email"
+                formControlName="email"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': submitted && formControls.email.errors
+                }"
+                placeholder="Email"
+              />
+              <div *ngIf="submitted && formControls.email.errors" class="validation-error">
+                <label *ngIf="formControls.email.errors.required">Email is required</label>
+              <label *ngIf="formControls.email.errors.email">Enter valid email</label>
+              </div>
+            </div>
+            <div class="data">
+              <h4>Salary</h4>
+              <input
+                type="text"
+                formControlName="salary"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': submitted && formControls.salary.errors
+                }"
+                placeholder="Salary"
+              />
+              <div *ngIf="submitted && formControls.salary.errors" class="validation-error">
+                <label *ngIf="formControls.salary.errors.required">Salary is required</label>
+                <label *ngIf="formControls.salary.errors.min">Min salary is 1</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="info_data">
+            <div class="data">
+              <h4>Position</h4>
+              <input
+                type="text"
+                formControlName="position"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': submitted && formControls.position.errors
+                }"
+                placeholder="Position"
+              />
+              <div *ngIf="submitted && formControls.position.errors" class="validation-error">
+                Position is required
+              </div>
+            </div>
+            <div class="data">
+              <h4>Department</h4>
+              <input
+                type="text"
+                formControlName="department"
+                class="form-control"
+                [ngClass]="{
+                  'is-invalid': submitted && formControls.department.errors
+                }"
+                placeholder="Department"
+              />
+              <div *ngIf="submitted && formControls.department.errors" class="validation-error">
+                Department is required
+              </div>
+            </div>
+          </div>
+
+          <div class="social_media">
+            <ul>
+              <button type="submit">Update</button>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</article>
