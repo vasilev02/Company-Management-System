@@ -29,7 +29,6 @@ export class HeaderComponent implements OnInit {
     this.authService.getEmitter().subscribe((response) => {
       if (response) {
         this.isLoggedIn = true;
-
       } else {
         this.isLoggedIn = false;
       }

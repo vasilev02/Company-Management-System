@@ -8,6 +8,7 @@ import { AboutUserComponent } from './about-user/about-user.component';
 import { WorkersComponent } from './workers/workers.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { RoleComponent } from './role/role.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'myinfo/:id', component: AboutUserComponent},
   { path: 'update-user/:id', component: UpdateUserComponent },
   { path: 'workers', component: WorkersComponent },
+  { path: 'roles', component: RoleComponent },
   { path: '**', component: NotFoundPageComponent },
 ];
 

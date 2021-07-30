@@ -1,0 +1,28 @@
+<article class="add-role">
+  <form [formGroup]="this.roleService.formAddRole" (submit)="onSubmit()">
+    <input
+      type="text"
+      formControlName="name"
+      class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && formControls.name.errors }"
+      placeholder="Add your role"
+    />
+    <div *ngIf="submitted && formControls.name.errors" class="role-validation-error">
+      <label *ngIf="formControls.name.errors.required">Role is required</label>
+      <label *ngIf="formControls.name.errors.minlength">Min length is 3 symbols</label>
+    </div>
+    <button type="submit" class="btn">Add <i class="fas fa-user-shield"></i></button>
+  </form>
+</article>
+
+<ol *ngFor="let role of list">
+  <li><a (click)='deleteRole(role.uniqueId)'>{{role.name}}</a></li>
+  
+</ol>
+
+<article class="image">
+  <img
+    src="https://res.cloudinary.com/defiefioi/image/upload/v1627630010/CMS/users-conection_unaswa.png"
+    alt="Connections"
+  />
+</article>

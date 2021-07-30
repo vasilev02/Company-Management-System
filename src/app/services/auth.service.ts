@@ -18,6 +18,7 @@ export class AuthService {
     await this.firebaseAuth
       .signInWithEmailAndPassword(user.email, user.password)
       .then((response) => {
+     
         this.isLoggedIn.emit(user.email);
         localStorage.setItem('user', JSON.stringify(response.user));
       })
@@ -49,13 +50,13 @@ export class AuthService {
 
   fillData(id: string, user: IUserRegister) {
     this.firestore.collection('users').doc(id).set({
-      uniqueId:id,
-      fullName:user.fullName,
-      email:user.email,
-      position:user.position,
-      department:user.department,
-      salary:user.salary,
-    })
+      uniqueId: id,
+      fullName: user.fullName,
+      email: user.email,
+      position: user.position,
+      department: user.department,
+      salary: user.salary,
+    });
   }
 
   logout() {

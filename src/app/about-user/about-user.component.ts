@@ -53,7 +53,6 @@ export class AboutUserComponent implements OnInit {
 
   deleteUser(id: string) {
     if (confirm('Are you sure to delete this user !')) {
-      this.authService.logout();
       this.fireStore.doc('users/' + id).delete();
     }
   }

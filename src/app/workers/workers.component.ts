@@ -22,7 +22,6 @@ export class WorkersComponent implements OnInit {
           ...(item.payload.doc.data() as User),
         };
       });
-      
     });
     
   }
