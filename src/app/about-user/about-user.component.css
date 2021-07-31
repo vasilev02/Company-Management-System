@@ -113,6 +113,14 @@ ul{
   cursor: pointer;
 }
 
+.role-info{
+  color: white;
+  background: #353c4e;
+  padding:7px;
+  width: 100px;
+  margin: 0 auto;
+}
+
 
 @media screen and (max-width: 750px) {
   .info_data {

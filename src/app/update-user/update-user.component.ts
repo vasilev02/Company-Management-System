@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { RoleService } from '../services/role.service';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -19,13 +20,15 @@ export class UpdateUserComponent implements OnInit {
     department: '',
     uniqueId: '',
   };
+  list!: any[];
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private fireStore: AngularFirestore,
     public userService: UserService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    public roleService: RoleService
   ) {
     this.activatedRoute.params.subscribe((query) => {
       this.routeId = query.id;
@@ -34,6 +37,7 @@ export class UpdateUserComponent implements OnInit {
 
   submitted!: boolean;
   formControls = this.userService.formUpdate.controls;
+  roleSelected: any;
 
   ngOnInit(): void {
     this.fireStore
@@ -44,6 +48,15 @@ export class UpdateUserComponent implements OnInit {
         this.userData = response.data();
         this.populateUpdateForm(this.userData);
       });
+
+    this.roleService.getRoles().subscribe((actionArray) => {
+      this.list = actionArray.map((item) => {
+        return {
+          id: item.payload.doc.id,
+          ...(item.payload.doc.data() as any),
+        };
+      });
+    });
   }
 
   populateUpdateForm(user: any) {
@@ -61,6 +74,27 @@ export class UpdateUserComponent implements OnInit {
         this.toastr.success(
           userData.fullName + ' was successfully editted !',
           'User edit'
+        );
+      }
+    }
+  }
+
+  onRoleSelected(selectedRole: any) {
+    let isFound = this.list.find((item) => {
+      if (item.name === selectedRole) {
+        return item;
+      }
+    });
+
+    console.log('is founded');
+    console.log(isFound);
+
+    if (selectedRole !== '' && isFound != undefined) {
+      if (confirm("Are you sure to edit this user's role !")) {
+        this.roleService.updateUserRole(selectedRole, this.routeId);
+        this.router.navigate(['worker/' + this.routeId]);
+        this.toastr.success(
+          "Role was successfully changed to "+ selectedRole + " !"
         );
       }
     }

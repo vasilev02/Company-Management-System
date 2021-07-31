@@ -53,6 +53,6 @@ export class HeaderComponent implements OnInit {
     localStorage.clear();
     this.authService.logout();
     this.router.navigate(['/login']);
-    this.toastr.success("Logged out succesfully !" ,"Log out")
+    this.toastr.success("Logged out successfully !" ,"Log out")
   }
 }

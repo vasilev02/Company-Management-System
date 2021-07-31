@@ -56,6 +56,7 @@ export class AuthService {
       position: user.position,
       department: user.department,
       salary: user.salary,
+      role:'PENDING'
     });
   }
 

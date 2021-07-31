@@ -29,6 +29,7 @@ export class UserService {
     position: new FormControl('', Validators.required),
     department: new FormControl('', Validators.required),
     salary: new FormControl('', [Validators.required, Validators.min(1)]),
+    role: new FormControl("")
   });
 
   constructor(private firestore: AngularFirestore) {}
