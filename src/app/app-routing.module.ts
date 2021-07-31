@@ -9,17 +9,19 @@ import { WorkersComponent } from './workers/workers.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { RoleComponent } from './role/role.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'worker/:id', component: AboutUserComponent },
-  { path: 'myinfo/:id', component: AboutUserComponent},
-  { path: 'update-user/:id', component: UpdateUserComponent },
-  { path: 'workers', component: WorkersComponent },
-  { path: 'roles', component: RoleComponent },
+  { path: 'worker/:id', component: AboutUserComponent, canActivate: [AuthGuard] },
+  { path: 'personal-information/:id', component: AboutMeComponent, canActivate: [AuthGuard] },
+  { path: 'update-user/:id', component: UpdateUserComponent, canActivate: [AuthGuard] },
+  { path: 'workers', component: WorkersComponent, canActivate: [AuthGuard] },
+  { path: 'roles', component: RoleComponent, canActivate: [AuthGuard] },
   { path: '**', component: NotFoundPageComponent },
 ];
 

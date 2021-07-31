@@ -28,6 +28,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { UserService } from './services/user.service';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { RoleComponent } from './role/role.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { RoleComponent } from './role/role.component';
     WorkersComponent,
     NotFoundPageComponent,
     UpdateUserComponent,
-    RoleComponent
+    RoleComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

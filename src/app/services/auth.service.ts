@@ -2,6 +2,8 @@ import { Injectable, Output, EventEmitter } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { IUser, IUserRegister } from '../shared/interfaces';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { UserService } from './user.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -10,15 +12,17 @@ export class AuthService {
   @Output() isLoggedIn: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(
-    public firebaseAuth: AngularFireAuth,
-    public firestore: AngularFirestore
+    private firebaseAuth: AngularFireAuth,
+    private firestore: AngularFirestore,
+    private userService: UserService,
+    private router: Router
   ) {}
 
   async login(user: IUser) {
+
     await this.firebaseAuth
       .signInWithEmailAndPassword(user.email, user.password)
       .then((response) => {
-     
         this.isLoggedIn.emit(user.email);
         localStorage.setItem('user', JSON.stringify(response.user));
       })
@@ -56,7 +60,8 @@ export class AuthService {
       position: user.position,
       department: user.department,
       salary: user.salary,
-      role:'PENDING'
+      role: 'PENDING',
+      status: 'active',
     });
   }
 

@@ -19,6 +19,7 @@ export class UpdateUserComponent implements OnInit {
     position: '',
     department: '',
     uniqueId: '',
+    role:'',
   };
   list!: any[];
 
@@ -80,21 +81,31 @@ export class UpdateUserComponent implements OnInit {
   }
 
   onRoleSelected(selectedRole: any) {
+    let roleId = '';
+    let roleCount = '';
+
     let isFound = this.list.find((item) => {
       if (item.name === selectedRole) {
+        roleId = item.id;
+        roleCount = item.count;
         return item;
       }
     });
 
-    console.log('is founded');
-    console.log(isFound);
-
     if (selectedRole !== '' && isFound != undefined) {
       if (confirm("Are you sure to edit this user's role !")) {
-        this.roleService.updateUserRole(selectedRole, this.routeId);
+        this.roleService.updateUserRole(
+          selectedRole,
+          roleId,
+          Number(roleCount),
+          this.routeId
+        );
+
+        this.roleService.updatePreviousRole(this.userData.role, this.list);
+
         this.router.navigate(['worker/' + this.routeId]);
         this.toastr.success(
-          "Role was successfully changed to "+ selectedRole + " !"
+          'Role was successfully changed to ' + selectedRole + ' !'
         );
       }
     }

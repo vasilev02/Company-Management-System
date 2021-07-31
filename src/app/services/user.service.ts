@@ -29,7 +29,7 @@ export class UserService {
     position: new FormControl('', Validators.required),
     department: new FormControl('', Validators.required),
     salary: new FormControl('', [Validators.required, Validators.min(1)]),
-    role: new FormControl("")
+    role: new FormControl(""),
   });
 
   constructor(private firestore: AngularFirestore) {}
@@ -40,5 +40,11 @@ export class UserService {
 
   updateUser(userData:any){
     this.firestore.collection('users').doc(userData.uniqueId).update(userData);
+  }
+
+  changeStatus(id:string){
+    this.firestore.collection('users').doc(id).update({
+      status: 'unactive'
+    });
   }
 }

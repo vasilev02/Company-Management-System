@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { UserService } from '../services/user.service';
 
 @Component({
-  selector: 'app-about-user',
-  templateUrl: './about-user.component.html',
-  styleUrls: ['./about-user.component.css'],
+  selector: 'app-about-me',
+  templateUrl: './about-me.component.html',
+  styleUrls: ['./about-me.component.css'],
 })
-export class AboutUserComponent implements OnInit {
+export class AboutMeComponent implements OnInit {
   routeId!: any;
   userData: any = {
     fullName: '',
@@ -25,9 +24,6 @@ export class AboutUserComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private fireStore: AngularFirestore,
-    private fireAuth: AngularFireAuth,
-    private userService: UserService,
-    private authService: AuthService,
     private route: Router
   ) {
     this.activatedRoute.params.subscribe((query) => {
@@ -51,8 +47,6 @@ export class AboutUserComponent implements OnInit {
 
   deleteUser(id: string) {
     if (confirm('Are you sure to delete this user !')) {
-      console.log(id)
-      this.userService.changeStatus(id);
       // this.fireStore.doc('users/' + id).delete();
     }
   }

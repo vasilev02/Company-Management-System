@@ -8,7 +8,7 @@
       />
 
         <select [(ngModel)]="roleSelected" (ngModelChange)="onRoleSelected($event)">
-          <option value="">Do not change</option>
+          <option value="" selected >Do not change</option>
           <option *ngFor="let role of list" value="{{role.name}}">{{role.name}}</option>
         </select>
 

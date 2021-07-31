@@ -16,7 +16,7 @@
 </article>
 
 <ol *ngFor="let role of list">
-  <li><a (click)='deleteRole(role.uniqueId)'>{{role.name}}</a></li>
+  <li><a (click)='deleteRole(role.uniqueId,role.name,role.count)'>{{role.name}}</a></li>
   
 </ol>
 

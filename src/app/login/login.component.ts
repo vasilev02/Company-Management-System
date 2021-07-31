@@ -4,30 +4,23 @@ import { Router } from '@angular/router';
 import { IUser } from '../shared/interfaces';
 import { UserService } from '../services/user.service';
 import { ToastrService } from 'ngx-toastr';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-
   isLoggedIn: boolean = false;
 
-  constructor(public authService: AuthService, public router: Router, private userService: UserService
-    , private toastr: ToastrService) { }
-
-  async onLogin(email: string, password: string) {
-    const user: IUser = {email, password}
-    await this.authService.login(user);
-
-    if (this.authService.isLoggedIn) {
-      this.isLoggedIn = true;
-      localStorage.setItem('email',email)
-      this.router.navigate(['/']);
-      this.toastr.success("Logged successfully !","Login");
-    }
-  }
+  constructor(
+    public authService: AuthService,
+    public router: Router,
+    private userService: UserService,
+    private toastr: ToastrService,
+    private fireAuth: AngularFireAuth
+  ) {}
 
   ngOnInit() {
     if (localStorage.getItem('user') != null) {
@@ -37,4 +30,16 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  async onLogin(email: string, password: string) {
+    const user: IUser = { email, password };
+    await this.authService.login(user);
+
+    if (this.authService.isLoggedIn) {
+      this.fireAuth.signInWithEmailAndPassword(email, password);
+      this.isLoggedIn = true;
+      localStorage.setItem('email', email);
+      this.router.navigate(['/']);
+      this.toastr.success('Logged successfully !', 'Login');
+    }
+  }
 }

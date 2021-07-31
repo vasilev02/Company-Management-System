@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
           if (currentUser['email'] === localStorage.getItem('email')) {
             this.userData = currentUser;
-            this.router.navigate(['/']);
+            // this.router.navigate(['/']);
           }
         });
       });
