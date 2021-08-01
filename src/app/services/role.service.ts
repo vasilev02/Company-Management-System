@@ -9,6 +9,9 @@ import { UserService } from './user.service';
   providedIn: 'root',
 })
 export class RoleService {
+
+  list!: any;
+
   formAddRole = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
   });
@@ -66,9 +69,5 @@ export class RoleService {
     });
   }
 
-  getRolesCount(){
-    this.firestore.collection('roles').get().subscribe(response =>{
-      return response.size;
-    })
-  }
+  
 }

@@ -1,0 +1,19 @@
+<body>
+  <article class="statistics-image">
+    <img
+      src="https://res.cloudinary.com/defiefioi/image/upload/v1627841465/CMS/statistics_xkvw0c.png"
+      alt="Circles"
+    />
+  </article>
+
+  <google-chart
+    [type]="type"
+    [data]="[
+      ['Roles', listRoles],
+      ['Workers', listUsers],
+      ['Tasks', listTasks]
+    ]"
+    [options]="myOptions"
+    style="margin: 0px auto"
+  ></google-chart>
+</body>

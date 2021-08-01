@@ -12,6 +12,7 @@ import { RoleComponent } from './role/role.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { AuthGuard } from './services/auth.guard';
 import { TaskComponent } from './task/task.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'workers', component: WorkersComponent, canActivate: [AuthGuard] },
   { path: 'roles', component: RoleComponent, canActivate: [AuthGuard] },
   { path: 'add-task', component: TaskComponent, canActivate: [AuthGuard] },
+  { path: 'statistics', component: StatisticsComponent, canActivate: [AuthGuard] },
   { path: '**', component: NotFoundPageComponent },
 ];
 

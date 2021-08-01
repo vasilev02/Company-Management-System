@@ -18,6 +18,9 @@
       <a routerLink="/add-task">Add task</a>
     </li>
     <li *ngIf="isLoggedIn">
+      <a routerLink="/statistics">Statistics</a>
+    </li>
+    <li *ngIf="isLoggedIn">
       <a  (click)="myInfoDetails()">My info</a>
     </li>
     <li *ngIf="isLoggedIn">

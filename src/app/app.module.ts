@@ -30,6 +30,8 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { RoleComponent } from './role/role.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { TaskComponent } from './task/task.component';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { TaskComponent } from './task/task.component';
     UpdateUserComponent,
     RoleComponent,
     AboutMeComponent,
-    TaskComponent
+    TaskComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +64,7 @@ import { TaskComponent } from './task/task.component';
     RouterModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    GoogleChartsModule,
     ToastrModule.forRoot({
       progressBar:true,
       preventDuplicates:true

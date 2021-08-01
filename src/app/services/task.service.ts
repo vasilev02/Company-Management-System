@@ -20,6 +20,10 @@ export class TaskService {
     private toastr: ToastrService
   ) {}
 
+  getTasks(){
+    return this.firestore.collection('tasks').snapshotChanges();
+  }
+
   addTask(taskData: any, selectedRole: string) {
     if (confirm('Are you sure to add this task !')) {
 

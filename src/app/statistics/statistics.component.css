@@ -1,0 +1,16 @@
+body {
+  margin: 0px;
+  min-height: 70vh;
+  background-image: url("https://res.cloudinary.com/defiefioi/image/upload/v1627842184/CMS/pngegg_ucpybg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.statistics-image {
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.statistics-image img {
+  width: 100%;
+}
