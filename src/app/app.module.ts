@@ -29,6 +29,7 @@ import { UserService } from './services/user.service';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { RoleComponent } from './role/role.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
     NotFoundPageComponent,
     UpdateUserComponent,
     RoleComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,

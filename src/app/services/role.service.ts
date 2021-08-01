@@ -65,4 +65,10 @@ export class RoleService {
       }
     });
   }
+
+  getRolesCount(){
+    this.firestore.collection('roles').get().subscribe(response =>{
+      return response.size;
+    })
+  }
 }

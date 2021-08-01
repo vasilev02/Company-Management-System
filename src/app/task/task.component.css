@@ -1,0 +1,60 @@
+body {
+  text-align: center;
+  margin: 0px;
+  min-height: 93vh;
+  background-image: url('https://res.cloudinary.com/defiefioi/image/upload/v1627117714/CMS/login-background_pyj7qg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+  background-color: #fff;
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 20px 20px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.form-control {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-control input,
+.form-control select,
+.form-control textarea {
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  padding: 10px;
+  display: block;
+  width: 95%;
+}
+
+button {
+  color: white;
+  background: #ff9f00;
+  border: none;
+  font-size: 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 8px 30px;
+  margin: 15px;
+}
+
+button:hover {
+  background: #468bcc;
+  cursor: pointer;
+}
+
+.role-validation-error {
+  text-align: center;
+  font-size: 15px;
+  color: red;
+}

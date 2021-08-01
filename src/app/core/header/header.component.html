@@ -15,6 +15,9 @@
       <a routerLink="/roles">Roles</a>
     </li>
     <li *ngIf="isLoggedIn">
+      <a routerLink="/add-task">Add task</a>
+    </li>
+    <li *ngIf="isLoggedIn">
       <a  (click)="myInfoDetails()">My info</a>
     </li>
     <li *ngIf="isLoggedIn">

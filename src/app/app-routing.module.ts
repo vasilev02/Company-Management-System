@@ -11,6 +11,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { RoleComponent } from './role/role.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { AuthGuard } from './services/auth.guard';
+import { TaskComponent } from './task/task.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'update-user/:id', component: UpdateUserComponent, canActivate: [AuthGuard] },
   { path: 'workers', component: WorkersComponent, canActivate: [AuthGuard] },
   { path: 'roles', component: RoleComponent, canActivate: [AuthGuard] },
+  { path: 'add-task', component: TaskComponent, canActivate: [AuthGuard] },
   { path: '**', component: NotFoundPageComponent },
 ];
 
