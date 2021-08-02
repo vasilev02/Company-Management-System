@@ -13,12 +13,13 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { AuthGuard } from './services/auth.guard';
 import { TaskComponent } from './task/task.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { AfterLoginGuard } from './services/after-login.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'register', component: RegisterComponent, canActivate: [AfterLoginGuard] },
+  { path: 'login', component: LoginComponent, canActivate: [AfterLoginGuard] },
+  { path: 'about', component: AboutComponent},
   { path: 'worker/:id', component: AboutUserComponent, canActivate: [AuthGuard] },
   { path: 'personal-information/:id', component: AboutMeComponent, canActivate: [AuthGuard] },
   { path: 'update-user/:id', component: UpdateUserComponent, canActivate: [AuthGuard] },
