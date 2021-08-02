@@ -33,6 +33,14 @@ import { TaskComponent } from './task/task.component';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { StatisticsComponent } from './statistics/statistics.component';
 
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import { CalendarComponent } from './calendar/calendar.component';
+
+FullCalendarModule.registerPlugins([
+  dayGridPlugin
+]);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +55,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
     RoleComponent,
     AboutMeComponent,
     TaskComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +74,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     GoogleChartsModule,
+    FullCalendarModule ,
     ToastrModule.forRoot({
       progressBar:true,
       preventDuplicates:true

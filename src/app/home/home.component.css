@@ -104,8 +104,8 @@
 }
 
 .btn:hover {
-  background: white;
-  color: #468bcc;
+  background: #468bcc;
+  color: white;
   cursor: pointer;
 }
 

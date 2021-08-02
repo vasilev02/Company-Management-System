@@ -14,6 +14,7 @@ import { AuthGuard } from './services/auth.guard';
 import { TaskComponent } from './task/task.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { AfterLoginGuard } from './services/after-login.guard';
+import { CalendarComponent } from './calendar/calendar.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'roles', component: RoleComponent, canActivate: [AuthGuard] },
   { path: 'add-task', component: TaskComponent, canActivate: [AuthGuard] },
   { path: 'statistics', component: StatisticsComponent, canActivate: [AuthGuard] },
+  { path: 'calendar', component: CalendarComponent, canActivate: [AuthGuard] },
   { path: '**', component: NotFoundPageComponent },
 ];
 

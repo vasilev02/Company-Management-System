@@ -21,6 +21,8 @@
     "@angular/platform-browser": "~12.1.0-",
     "@angular/platform-browser-dynamic": "~12.1.0-",
     "@angular/router": "~12.1.0-",
+    "@fullcalendar/angular": "^5.9.0",
+    "@fullcalendar/daygrid": "^5.9.0",
     "angular-google-charts": "^2.2.2",
     "firebase": "^7.0 || ^8.0",
     "ngx-toastr": "^14.0.0",

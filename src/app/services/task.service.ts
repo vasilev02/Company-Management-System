@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FormGroup, FormControl, Validator, Validators } from '@angular/forms';
@@ -20,21 +21,23 @@ export class TaskService {
     private toastr: ToastrService
   ) {}
 
-  getTasks(){
+  getTasks() {
     return this.firestore.collection('tasks').snapshotChanges();
   }
 
   addTask(taskData: any, selectedRole: string) {
     if (confirm('Are you sure to add this task !')) {
 
-      const timeElapsed = Date.now();
-      const today = new Date(timeElapsed);
+      var now = Date.now().toString();
+      const fromattedDate = formatDate(now, 'dd-MM-yyyy', 'en-IN').toString();
+      let dateParts = fromattedDate.split('-');
+      let newDate = dateParts[2] + '-' + dateParts[1] + '-' + dateParts[0];
 
       this.firestore.collection('tasks').doc().set({
-        name: taskData.name,
+        title: taskData.name,
         desription: taskData.description,
         role: selectedRole,
-        date: today.toDateString(),
+        date: newDate,
       });
       this.toastr.success('Successfully added ' + taskData.name + ' task !');
     }

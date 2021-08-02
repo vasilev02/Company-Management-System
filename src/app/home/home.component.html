@@ -64,6 +64,7 @@
 
 <article *ngIf="isLoggedIn" class="home">
   <h2>Welcome, <span class="inner-text">{{userData.fullName}}</span> !</h2>
+  <a class="btn" routerLink='/calendar'>Calendar</a>
   <section class="home-image-wrapper">
     <img
       src="https://res.cloudinary.com/defiefioi/image/upload/v1627115323/CMS/working-blocks_lymnzx.png"
