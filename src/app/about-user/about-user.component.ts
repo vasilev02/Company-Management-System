@@ -50,7 +50,7 @@ export class AboutUserComponent implements OnInit {
   }
 
   deleteUser(id: string) {
-    if (confirm('Are you sure to delete this user !')) {
+    if (confirm('Are you sure to delete this user ?')) {
       console.log(id)
       this.userService.changeStatus(id);
       // this.fireStore.doc('users/' + id).delete();

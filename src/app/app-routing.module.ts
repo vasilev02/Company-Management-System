@@ -15,6 +15,7 @@ import { TaskComponent } from './task/task.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { AfterLoginGuard } from './services/after-login.guard';
 import { CalendarComponent } from './calendar/calendar.component';
+import { AdminGuard } from './services/admin.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },

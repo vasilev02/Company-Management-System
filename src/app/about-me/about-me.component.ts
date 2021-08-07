@@ -46,7 +46,7 @@ export class AboutMeComponent implements OnInit {
   }
 
   deleteUser(id: string) {
-    if (confirm('Are you sure to delete this user !')) {
+    if (confirm('Are you sure to delete this user ?')) {
       // this.fireStore.doc('users/' + id).delete();
     }
   }

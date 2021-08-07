@@ -14,6 +14,7 @@ export class TaskComponent implements OnInit {
   ) {}
 
   list!: any[];
+  tasksList!: any[];
   selectedRole!: string;
   submitted!: boolean;
   formControls = this.taskService.formAddTask.controls;
@@ -23,6 +24,15 @@ export class TaskComponent implements OnInit {
 
     this.roleService.getRoles().subscribe((actionArray) => {
       this.list = actionArray.map((item) => {
+        return {
+          uniqueId: item.payload.doc.id,
+          ...(item.payload.doc.data() as any),
+        };
+      });
+    });
+
+    this.taskService.getTasks().subscribe((actionArray) => {
+      this.tasksList = actionArray.map((item) => {
         return {
           uniqueId: item.payload.doc.id,
           ...(item.payload.doc.data() as any),
@@ -52,5 +62,10 @@ export class TaskComponent implements OnInit {
     } else {
       this.selectedRole = 'ALL';
     }
+  }
+
+  deleteTask(id:string, title:string){
+    console.log(id);
+    this.taskService.deleteTaskById(id, title);
   }
 }

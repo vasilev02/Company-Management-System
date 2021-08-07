@@ -9,11 +9,15 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class TaskService {
   formAddTask = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3),Validators.maxLength(30)]),
+    name: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(30),
+    ]),
     description: new FormControl('', [
       Validators.required,
       Validators.minLength(10),
-      Validators.maxLength(200)
+      Validators.maxLength(200),
     ]),
   });
 
@@ -28,7 +32,6 @@ export class TaskService {
 
   addTask(taskData: any, selectedRole: string) {
     if (confirm('Are you sure to add this task !')) {
-
       var now = Date.now().toString();
       const fromattedDate = formatDate(now, 'dd-MM-yyyy', 'en-IN').toString();
       let dateParts = fromattedDate.split('-');
@@ -36,11 +39,18 @@ export class TaskService {
 
       this.firestore.collection('tasks').doc().set({
         title: taskData.name,
-        desription: taskData.description,
+        description: taskData.description,
         role: selectedRole,
         date: newDate,
       });
       this.toastr.success('Successfully added ' + taskData.name + ' task !');
+    }
+  }
+
+  deleteTaskById(id: string, title: string) {
+    if (confirm('Are you sure to delete this task ?')) {
+      this.firestore.doc('tasks/' + id).delete();
+      this.toastr.success('Successfully deleted ' + title + ' task !');
     }
   }
 }

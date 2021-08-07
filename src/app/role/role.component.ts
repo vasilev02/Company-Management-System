@@ -42,7 +42,7 @@ export class RoleComponent implements OnInit {
     if (Number(roleCount) > 0) {
       this.toastr.error("You have " + roleCount + " "+ roleName + " roles in use !")
     } else {
-      if (confirm('Are you sure to delete this role !')) {
+      if (confirm('Are you sure to delete this role ?')) {
         this.roleService.deleteRoleById(uniqueId, roleName);
       }
     }
