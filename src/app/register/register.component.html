@@ -77,6 +77,7 @@
               <div *ngIf="submitted && formControls.salary.errors" class="validation-error">
                 <label *ngIf="formControls.salary.errors.required">Salary is required</label>
                 <label *ngIf="formControls.salary.errors.min">Min salary is 1</label>
+                <label *ngIf="formControls.salary.errors.max">Max salary is 50 000</label>
               </div>
             </label>
 

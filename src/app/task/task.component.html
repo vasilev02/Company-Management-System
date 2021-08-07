@@ -14,6 +14,7 @@
       <div *ngIf="submitted && formControls.name.errors" class="role-validation-error">
         <label *ngIf="formControls.name.errors.required">Name is required</label>
         <label *ngIf="formControls.name.errors.minlength">Min length is 3 symbols</label>
+        <label *ngIf="formControls.name.errors.maxlength">Max length is 30 symbols</label>
       </div>
     </div>
 
@@ -32,6 +33,7 @@
       <div *ngIf="submitted && formControls.description.errors" class="role-validation-error">
         <label *ngIf="formControls.description.errors.required">Description is required</label>
         <label *ngIf="formControls.description.errors.minlength">Min length is 10 symbols</label>
+        <label *ngIf="formControls.description.errors.maxlength">Min length is 200 symbols</label>
       </div>
     </div>
 

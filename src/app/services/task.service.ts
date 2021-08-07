@@ -9,10 +9,11 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class TaskService {
   formAddTask = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    name: new FormControl('', [Validators.required, Validators.minLength(3),Validators.maxLength(30)]),
     description: new FormControl('', [
       Validators.required,
       Validators.minLength(10),
+      Validators.maxLength(200)
     ]),
   });
 

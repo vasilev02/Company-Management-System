@@ -15,7 +15,7 @@ export class UserService {
     email: new FormControl('', [Validators.required, Validators.email]),
     position: new FormControl('', Validators.required),
     department: new FormControl('', Validators.required),
-    salary: new FormControl('', [Validators.required, Validators.min(1)]),
+    salary: new FormControl('', [Validators.required, Validators.min(1), Validators.max(50000)]),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(6),
@@ -28,7 +28,7 @@ export class UserService {
     email: new FormControl('', [Validators.required, Validators.email]),
     position: new FormControl('', Validators.required),
     department: new FormControl('', Validators.required),
-    salary: new FormControl('', [Validators.required, Validators.min(1)]),
+    salary: new FormControl('', [Validators.required, Validators.min(1), Validators.max(50000)]),
     role: new FormControl(""),
   });
 

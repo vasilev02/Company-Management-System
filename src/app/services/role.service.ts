@@ -13,7 +13,7 @@ export class RoleService {
   list!: any;
 
   formAddRole = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    name: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
   });
 
   constructor(

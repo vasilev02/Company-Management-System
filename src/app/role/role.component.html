@@ -10,6 +10,7 @@
     <div *ngIf="submitted && formControls.name.errors" class="role-validation-error">
       <label *ngIf="formControls.name.errors.required">Role is required</label>
       <label *ngIf="formControls.name.errors.minlength">Min length is 3 symbols</label>
+      <label *ngIf="formControls.name.errors.maxlength">Max length is 30 symbols</label>
     </div>
     <button type="submit" class="btn">Add <i class="fas fa-user-shield"></i></button>
   </form>
