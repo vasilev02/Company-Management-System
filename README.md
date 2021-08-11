@@ -2,7 +2,7 @@
 Angular project
 
 
-## Project summary
+## Project summary [<img align="left" alt="linkedin" width="30px" src="https://toppng.com/uploads/preview/summary-icon-png-summary-icon-blue-11563429408keqysu9dqe.png" />]
 
 The goal is to implement an internal system for a company to organize
 its resources - employees and materials. The functionality is to maintain
@@ -33,11 +33,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Connect with me
 [<img align="left" alt="linkedin" width="30px" src="https://cdn.icon-icons.com/icons2/2429/PNG/512/linkedin_logo_icon_147268.png" />][linkedin]
-[<img align="left" alt="linkedin" width="30px" src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" />][github]
 
 [Toastr]: https://www.npmjs.com/package/ngx-toastr
 [Angular-calendar]: https://angular-calendar.com
 [Cloudinary]: https://cloudinary.com
 [linkedin]: https://www.linkedin.com/in/valentin-vasilev-849a8b1a6/
-[github]: https://github.com/vasilev02
 
