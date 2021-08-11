@@ -23,9 +23,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Languages and tools
 
-[<img align="left" alt="linkedin" width="30px" src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" />]
-[<img align="left" alt="linkedin" width="30px" src="https://e7.pngegg.com/pngimages/410/100/png-clipart-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design.png" />]
-[<img align="left" alt="linkedin" width="30px" src="https://e7.pngegg.com/pngimages/893/87/png-clipart-web-development-html-cascading-style-sheets-css3-bootstrap-minimalist-resume-blue-angle.png" />]
+[<img align="left" alt="linkedin" width="30px" src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" />][angular]
+[<img align="left" alt="linkedin" width="30px" src="https://e7.pngegg.com/pngimages/410/100/png-clipart-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design.png" />][html]
+[<img align="left" alt="linkedin" width="35px" src="https://e7.pngegg.com/pngimages/893/87/png-clipart-web-development-html-cascading-style-sheets-css3-bootstrap-minimalist-resume-blue-angle.png" />][css]
+[<img align="left" alt="linkedin" width="35px" src="https://w7.pngwing.com/pngs/359/1024/png-transparent-firebase-cloud-messaging-computer-icons-google-cloud-messaging-android-angle-triangle-computer-programming-thumbnail.png" />][firebase]
 
 
 ## Bonuses
@@ -43,4 +44,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 [Angular-calendar]: https://angular-calendar.com
 [Cloudinary]: https://cloudinary.com
 [linkedin]: https://www.linkedin.com/in/valentin-vasilev-849a8b1a6/
+[angular]: https://angular.io/
+[html]: https://html.spec.whatwg.org/
+[css]: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+[firebase]: https://firebase.google.com/
 
