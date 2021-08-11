@@ -22,8 +22,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Languages and tools
+
 <img align="left" alt="linkedin" width="30px" src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" />
-<img align="left" alt="linkedin" width="30px" src="https://w7.pngwing.com/pngs/581/330/png-transparent-logo-cascading-style-sheets-html5-css3-prags-html5-und-css3-der-meisterkurs-html5-css3-javascript-design-text-trademark-logo.png" />
+<img align="left" alt="linkedin" width="30px" src="https://e7.pngegg.com/pngimages/410/100/png-clipart-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design.png" />
+<img align="left" alt="linkedin" width="30px" src="https://img.favpng.com/9/15/14/css3-cascading-style-sheets-logo-html-png-favpng-zNceG1C3PUpjKThDUF68AN96N.jpg" />
 
 
 ## Bonuses
