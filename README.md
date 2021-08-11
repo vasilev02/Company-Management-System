@@ -11,9 +11,13 @@ when using the system.
 
 ## Public part
 
+The application's public part represents static pages which are available to all unauthenticated users.
+These pages are: /home /login /register and /about.
+
 ## Private part
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The application's private part represents different dynamic pages which are visible only to authentiated users.
+These dynamic pages are: /workers /roles /statistics /add-role /update-user and ./personal-information.
 
 ## Error handling
 
