@@ -13,7 +13,7 @@ when using the system.
 
 
 
-## Private part <img align="left" alt="linkedin" width="30px" src="https://www.vhv.rs/dpng/d/8-87024_yellow-lock-png-transparent-png.png" />
+## Private part
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
@@ -22,6 +22,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Languages and tools
+<img align="left" alt="linkedin" width="30px" src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" />
+<img align="left" alt="linkedin" width="30px" src="https://w7.pngwing.com/pngs/581/330/png-transparent-logo-cascading-style-sheets-html5-css3-prags-html5-und-css3-der-meisterkurs-html5-css3-javascript-design-text-trademark-logo.png" />
+
 
 ## Bonuses
 
