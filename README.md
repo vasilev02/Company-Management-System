@@ -43,7 +43,7 @@ The application has client-side form validation which helps ensure data.
 
 ## Statistics
 
-[![Valentin's GitHub stats](https://github-readme-stats.vercel.app/api?username=vasilev02)](https://github.com/vasilev02/github-readme-stats)
+[![Valentin's GitHub stats](https://github-readme-stats.vercel.app/api?username=vasilev02&show_icons=true)](https://github.com/vasilev02/github-readme-stats)
 
 <br/>
 
