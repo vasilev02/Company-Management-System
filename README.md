@@ -32,9 +32,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 [Cloudinary] - for storing web application's images.
 
 ## Connect with me
-[<img align="left" alt="linkedin" width="22px" src="https://cdn.pixabay.com/photo/2017/12/06/04/57/linkedin-3000959_960_720.png" />]
+[<img align="left" alt="linkedin" width="30px" src="https://cdn.icon-icons.com/icons2/2429/PNG/512/linkedin_logo_icon_147268.png" />][linkedin]
+[<img align="left" alt="linkedin" width="30px" src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" />][github]
 
 [Toastr]: https://www.npmjs.com/package/ngx-toastr
 [Angular-calendar]: https://angular-calendar.com
 [Cloudinary]: https://cloudinary.com
+[linkedin]: https://www.linkedin.com/in/valentin-vasilev-849a8b1a6/
+[github]: https://github.com/vasilev02
 
