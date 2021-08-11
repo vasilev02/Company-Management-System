@@ -2,7 +2,7 @@
 Angular project
 
 
-## Project summary <img  alt="linkedin" width="30px" src="https://i.pinimg.com/originals/1b/37/a3/1b37a31607ae30bf0fd3cf73f6009447.png" />
+## Project summary <img align="left" alt="linkedin" width="30px" src="https://i.pinimg.com/originals/1b/37/a3/1b37a31607ae30bf0fd3cf73f6009447.png" />
 
 The goal is to implement an internal system for a company to organize
 its resources - employees and materials. The functionality is to maintain
