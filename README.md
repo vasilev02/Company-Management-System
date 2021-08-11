@@ -30,7 +30,7 @@ The application has client-side form validation which helps ensure data.
 [<img align="left" alt="linkedin" width="30px" src="https://e7.pngegg.com/pngimages/410/100/png-clipart-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design.png" />][html]
 [<img align="left" alt="linkedin" width="35px" src="https://e7.pngegg.com/pngimages/893/87/png-clipart-web-development-html-cascading-style-sheets-css3-bootstrap-minimalist-resume-blue-angle.png" />][css]
 [<img align="left" alt="linkedin" width="35px" src="https://w7.pngwing.com/pngs/359/1024/png-transparent-firebase-cloud-messaging-computer-icons-google-cloud-messaging-android-angle-triangle-computer-programming-thumbnail.png" />][firebase]
-[<img align="left" alt="linkedin" width="35px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png" />][github]
+[<img align="left" alt="linkedin" width="35px" src="https://cdn.freebiesupply.com/logos/thumbs/2x/git-logo.png" />][git]
 [<img align="left" alt="linkedin" width="35px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" />][github]
 
 <br/>
@@ -65,4 +65,5 @@ The application has client-side form validation which helps ensure data.
 [html]: https://html.spec.whatwg.org/
 [css]: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
 [firebase]: https://firebase.google.com/
+[git]: https://git-scm.com/
 [github]: https://github.com/
