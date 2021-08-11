@@ -13,7 +13,7 @@ when using the system.
 
 
 
-## Private part
+## Private part <img align="left" alt="linkedin" width="30px" src="https://www.vhv.rs/dpng/d/8-87024_yellow-lock-png-transparent-png.png" />
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
