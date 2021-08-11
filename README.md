@@ -38,7 +38,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Statistics
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/vasilev02/github-readme-stats)
+[![Valentin's GitHub stats](https://github-readme-stats.vercel.app/api?username=vasilev02)](https://github.com/vasilev02/github-readme-stats)
 
 
 ## Connect with me
