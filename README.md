@@ -36,6 +36,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 [Cloudinary] - for storing web application's images.
 
+## Statistics
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/vasilev02/github-readme-stats)
+
+
 ## Connect with me
 
 [<img align="left" alt="linkedin" width="30px" src="https://cdn.icon-icons.com/icons2/2429/PNG/512/linkedin_logo_icon_147268.png" />][linkedin]
