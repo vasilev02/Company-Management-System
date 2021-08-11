@@ -21,7 +21,8 @@ These dynamic pages are: `/workers` `/roles` `/statistics` `/add-role` `/update-
 
 ## Error handling
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+All of the backend errors are handled on the front-end and validation error messages are being popped up.
+The application has client-side form validation which helps ensure data.
 
 ## Languages and tools
 
