@@ -40,6 +40,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 [![Valentin's GitHub stats](https://github-readme-stats.vercel.app/api?username=vasilev02)](https://github.com/vasilev02/github-readme-stats)
 
+<br/>
+
+[![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vasilev02)](https://github.com/vasilev02/Company-Management-System)
+
+
 
 ## Connect with me
 
