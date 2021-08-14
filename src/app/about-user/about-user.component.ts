@@ -50,17 +50,17 @@ export class AboutUserComponent implements OnInit {
     this.route.navigate(['update-user/' + uniqueId]);
   }
 
-  deleteUser(id: string) {
+  deactivateUser(id: string) {
     if (confirm('Are you sure to delete this user ?')) {
       this.userService.changeStatus(id);
-      this.route.navigate(['workers/']);
+      this.route.navigate(['workers']);
     }
   }
 
   activateUser(id: string) {
     if (confirm('Are you sure to activate this user ?')) {
       this.userService.changeStatusActivate(id);
-      this.route.navigate(['workers/']);
+      this.route.navigate(['workers']);
     }
   }
 }

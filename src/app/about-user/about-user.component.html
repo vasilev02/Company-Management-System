@@ -40,7 +40,7 @@
               <a (click)="updateWorker(userData.uniqueId)" ><i class="fas fa-edit" aria-hidden="true"></i></a>
             </li>
             <li *ngIf="userData.status === 'active'">
-              <a (click)="deleteUser(userData.uniqueId)"><i class="fas fa-ban" aria-hidden="true"></i></a>
+              <a (click)="deactivateUser(userData.uniqueId)"><i class="fas fa-ban" aria-hidden="true"></i></a>
             </li>
             <li *ngIf="userData.status === 'unactive'">
               <a (click)="activateUser(userData.uniqueId)"><i class="fas fa-unlock-alt" aria-hidden="true"></i></a>
