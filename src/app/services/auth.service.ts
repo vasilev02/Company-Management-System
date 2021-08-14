@@ -42,6 +42,7 @@ export class AuthService {
   }
 
   async register(user: IUserRegister) {
+    
     let id: string | undefined;
 
     let email = user.email;
