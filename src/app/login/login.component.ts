@@ -13,6 +13,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class LoginComponent implements OnInit {
   isLoggedIn: boolean = false;
+  isActive!: boolean;
 
   constructor(
     public authService: AuthService,

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   @Output() isLoggedIn: EventEmitter<any> = new EventEmitter<any>();
+  userInfo!: any;
 
   constructor(
     private firebaseAuth: AngularFireAuth,
@@ -19,12 +20,21 @@ export class AuthService {
   ) {}
 
   async login(user: IUser) {
-
     await this.firebaseAuth
       .signInWithEmailAndPassword(user.email, user.password)
       .then((response) => {
         this.isLoggedIn.emit(user.email);
         localStorage.setItem('user', JSON.stringify(response.user));
+
+        this.userService.getUsers().subscribe((data) => {
+          this.userInfo = data
+            .find((currentUser) => {
+              const userData: any = currentUser.payload.doc.data();
+              return userData.email === user.email;
+            })
+            ?.payload.doc.data();
+          localStorage.setItem('role', this.userInfo.role);
+        });
       })
       .catch((error) => {
         window.alert(error.message);

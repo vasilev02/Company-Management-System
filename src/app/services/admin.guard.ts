@@ -5,6 +5,7 @@ import {
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { UserService } from './user.service';
 
@@ -12,12 +13,19 @@ import { UserService } from './user.service';
   providedIn: 'root',
 })
 export class AdminGuard implements CanActivate {
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    private toastrService: ToastrService
+  ) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean {
-   return true;
+    if (localStorage.getItem('role') === 'ADMIN') {
+      return true;
+    }
+    this.toastrService.error('You are not admin !')
+    return false;
   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { GoogleChartComponent } from 'angular-google-charts'; 
 import { ChartType, Row } from "angular-google-charts"
 import { RoleService } from '../services/role.service';
 import { TaskService } from '../services/task.service';

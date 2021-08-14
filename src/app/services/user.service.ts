@@ -47,4 +47,10 @@ export class UserService {
       status: 'unactive'
     });
   }
+
+  changeStatusActivate(id:string){
+    this.firestore.collection('users').doc(id).update({
+      status: 'active'
+    });
+  }
 }

@@ -56,7 +56,6 @@ export class RoleService {
   }
 
   updatePreviousRole(roleToSearch: any, listRoles: any[]) {
-    console.log(listRoles)
     listRoles.find((current) => {
       if (current.name === roleToSearch) {
         this.firestore

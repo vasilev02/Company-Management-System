@@ -1,6 +1,11 @@
 <article class="info-card">
     <div class="wrapper">
-      <div class="left">
+      <div *ngIf="userData.status === 'active'" class="left">
+        <img src="https://res.cloudinary.com/defiefioi/image/upload/v1627120084/CMS/worker_duzozy.png" alt="user" width="100">
+        <h4>{{userData.fullName}}</h4>
+        <p class="role-info">{{userData.role}}</p>
+      </div>
+      <div *ngIf="userData.status === 'unactive'" class="left" style="background: linear-gradient(to right, #405152, #e00e0efa)">
         <img src="https://res.cloudinary.com/defiefioi/image/upload/v1627120084/CMS/worker_duzozy.png" alt="user" width="100">
         <h4>{{userData.fullName}}</h4>
         <p class="role-info">{{userData.role}}</p>
@@ -34,8 +39,11 @@
             <li>
               <a (click)="updateWorker(userData.uniqueId)" ><i class="fas fa-edit" aria-hidden="true"></i></a>
             </li>
-            <li>
-              <a (click)="deleteUser(userData.uniqueId)"><i class="fas fa-trash-alt" aria-hidden="true"></i></a>
+            <li *ngIf="userData.status === 'active'">
+              <a (click)="deleteUser(userData.uniqueId)"><i class="fas fa-ban" aria-hidden="true"></i></a>
+            </li>
+            <li *ngIf="userData.status === 'unactive'">
+              <a (click)="activateUser(userData.uniqueId)"><i class="fas fa-unlock-alt" aria-hidden="true"></i></a>
             </li>
           </ul>
         </div>

@@ -20,6 +20,7 @@ export class AboutUserComponent implements OnInit {
     position: '',
     department: '',
     uniqueId: '',
+    status: '',
   };
 
   constructor(
@@ -51,9 +52,15 @@ export class AboutUserComponent implements OnInit {
 
   deleteUser(id: string) {
     if (confirm('Are you sure to delete this user ?')) {
-      console.log(id)
       this.userService.changeStatus(id);
-      // this.fireStore.doc('users/' + id).delete();
+      this.route.navigate(['workers/']);
+    }
+  }
+
+  activateUser(id: string) {
+    if (confirm('Are you sure to activate this user ?')) {
+      this.userService.changeStatusActivate(id);
+      this.route.navigate(['workers/']);
     }
   }
 }

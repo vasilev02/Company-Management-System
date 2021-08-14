@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FullCalendarModule } from '@fullcalendar/angular';
-import dayGridPlugin from '@fullcalendar/daygrid';
 import { CalendarOptions } from '@fullcalendar/angular';
 import { TaskService } from '../services/task.service';
 import { ITask } from '../shared/interfaces';

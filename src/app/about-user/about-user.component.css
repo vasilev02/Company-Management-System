@@ -1,9 +1,9 @@
-.info-card{
-    display: flex;
-    justify-content: center;
+.info-card {
+  display: flex;
+  justify-content: center;
 }
 
-ul{
+ul {
   list-style: none;
   padding-left: 0px;
 }
@@ -14,9 +14,9 @@ ul{
   box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 50%);
 }
 
-.info-card{
- margin: 0px 60px;
- margin-bottom: 20px;
+.info-card {
+  margin: 0px 60px;
+  margin-bottom: 20px;
 }
 
 .wrapper .left {
@@ -109,18 +109,17 @@ ul{
   font-size: 18px;
 }
 
-.wrapper .social_media ul li a:hover{
+.wrapper .social_media ul li a:hover {
   cursor: pointer;
 }
 
-.role-info{
+.role-info {
   color: white;
   background: #353c4e;
-  padding:7px;
+  padding: 7px;
   width: 100px;
   margin: 0 auto;
 }
-
 
 @media screen and (max-width: 750px) {
   .info_data {
