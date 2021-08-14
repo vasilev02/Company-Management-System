@@ -1,5 +1,5 @@
 <body>
-  <select
+  <select *ngIf="isAdmin"
     name="role"
     id="role"
     [(ngModel)]="selectedRole"
@@ -11,7 +11,7 @@
     </option>
   </select>
 
-  <form
+  <form *ngIf="isAdmin"
     id="form"
     [formGroup]="this.taskService.formAddTask"
     (submit)="onSubmit()"
@@ -77,7 +77,7 @@
 
   <article class="tasks">
     <div class="modal" *ngFor="let task of tasksList">
-      <a (click)="deleteTask(task.uniqueId,task.title)" class="close-ribbon">&times;</a>
+      <a *ngIf="isAdmin" (click)="deleteTask(task.uniqueId,task.title)" class="close-ribbon">&times;</a>
       <div class="modal-content">
         <h3>{{task.title}}</h3>
         <p class="description">

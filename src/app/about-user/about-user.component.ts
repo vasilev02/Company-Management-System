@@ -12,6 +12,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./about-user.component.css'],
 })
 export class AboutUserComponent implements OnInit {
+  isAdmin!:boolean;
   routeId!: any;
   userData: any = {
     fullName: '',
@@ -44,6 +45,13 @@ export class AboutUserComponent implements OnInit {
       .then((response) => {
         this.userData = response.data();
       });
+
+      const role = localStorage.getItem('role');
+      if(role === 'ADMIN'){
+        this.isAdmin = true;
+      }else{
+        this.isAdmin = false;
+      }
   }
 
   updateWorker(uniqueId: string) {

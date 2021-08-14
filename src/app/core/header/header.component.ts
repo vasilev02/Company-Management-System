@@ -11,9 +11,10 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class HeaderComponent implements OnInit {
   isLoggedIn: boolean = false;
-  userData:any={
-    uniqueId:''
-  }
+  isAdmin!:boolean;
+  userData: any = {
+    uniqueId: '',
+  };
 
   constructor(
     public authService: AuthService,
@@ -32,6 +33,13 @@ export class HeaderComponent implements OnInit {
         this.isLoggedIn = false;
       }
     });
+
+    const role = localStorage.getItem('role');
+    if (role === 'ADMIN') {
+      this.isAdmin = true;
+    } else {
+      this.isAdmin = false;
+    }
   }
 
   myInfoDetails() {
@@ -41,7 +49,9 @@ export class HeaderComponent implements OnInit {
 
         if (currentUser['email'] === localStorage.getItem('email')) {
           this.userData = currentUser;
-          this.router.navigate(['personal-information/' + this.userData.uniqueId]);
+          this.router.navigate([
+            'personal-information/' + this.userData.uniqueId,
+          ]);
         }
       });
     });
@@ -52,6 +62,6 @@ export class HeaderComponent implements OnInit {
     localStorage.clear();
     this.authService.logout();
     this.router.navigate(['/login']);
-    this.toastr.success("Logged out successfully !" ,"Log out")
+    this.toastr.success('Logged out successfully !', 'Log out');
   }
 }

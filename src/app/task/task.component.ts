@@ -17,6 +17,7 @@ export class TaskComponent implements OnInit {
   tasksList!: any[];
   selectedRole!: string;
   submitted!: boolean;
+  isAdmin!:boolean;
   formControls = this.taskService.formAddTask.controls;
 
   ngOnInit(): void {
@@ -39,6 +40,13 @@ export class TaskComponent implements OnInit {
         };
       });
     });
+
+    const role = localStorage.getItem('role');
+      if(role === 'ADMIN'){
+        this.isAdmin = true;
+      }else{
+        this.isAdmin = false;
+      }
   }
 
   onSubmit() {

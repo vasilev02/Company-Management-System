@@ -18,7 +18,7 @@
               <h4>Email</h4>
               <p>{{userData.email}}</p>
             </div>
-            <div class="data">
+            <div *ngIf="isAdmin" class="data">
               <h4>Salary</h4>
               <p>{{userData.salary}}</p>
             </div>
@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-        <div class="social_media">
+        <div *ngIf="isAdmin" class="social_media">
           <ul>
             <li *ngIf="userData.status === 'active'">
               <a (click)="updateWorker(userData.uniqueId)" ><i class="fas fa-edit" aria-hidden="true"></i></a>
