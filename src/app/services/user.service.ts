@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { User } from '../shared/user.model';
 import { FormGroup, FormControl, Validator, Validators } from '@angular/forms';
+import { AngularFireAuth } from '@angular/fire/auth';
+
 
 @Injectable({
   providedIn: 'root',

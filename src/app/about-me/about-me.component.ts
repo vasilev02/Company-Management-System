@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-about-me',
@@ -21,7 +23,9 @@ export class AboutMeComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private fireStore: AngularFirestore,
-    private route: Router
+    private route: Router,
+    private firebaseAuth: AngularFireAuth,
+    private toastr: ToastrService
   ) {
     this.activatedRoute.params.subscribe((query) => {
       this.routeId = query.id;
@@ -38,13 +42,9 @@ export class AboutMeComponent implements OnInit {
       });
   }
 
-  updateWorker(uniqueId: string) {
-    this.route.navigate(['update-user/' + uniqueId]);
+  changePassword(email: string) {
+    this.firebaseAuth.sendPasswordResetEmail(email);
+    this.toastr.success('Check you email !');
   }
 
-  deleteUser(id: string) {
-    if (confirm('Are you sure to delete this user ?')) {
-      // this.fireStore.doc('users/' + id).delete();
-    }
-  }
 }

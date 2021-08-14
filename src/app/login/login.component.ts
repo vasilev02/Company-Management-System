@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
     public authService: AuthService,
     public router: Router,
     private userService: UserService,
-    private toastr: ToastrService,
     private fireAuth: AngularFireAuth
   ) {}
 
@@ -40,7 +39,7 @@ export class LoginComponent implements OnInit {
       this.isLoggedIn = true;
       localStorage.setItem('email', email);
       this.router.navigate(['/']);
-      this.toastr.success('Logged successfully !', 'Login');
+      
     }
   }
 }

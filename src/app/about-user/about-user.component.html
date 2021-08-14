@@ -36,7 +36,7 @@
         </div>
         <div class="social_media">
           <ul>
-            <li>
+            <li *ngIf="userData.status === 'active'">
               <a (click)="updateWorker(userData.uniqueId)" ><i class="fas fa-edit" aria-hidden="true"></i></a>
             </li>
             <li *ngIf="userData.status === 'active'">

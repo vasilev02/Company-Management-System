@@ -4,6 +4,7 @@ import { IUser, IUserRegister } from '../shared/interfaces';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UserService } from './user.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root',
@@ -16,6 +17,7 @@ export class AuthService {
     private firebaseAuth: AngularFireAuth,
     private firestore: AngularFirestore,
     private userService: UserService,
+    private toastr: ToastrService,
     private router: Router
   ) {}
 
@@ -25,6 +27,7 @@ export class AuthService {
       .then((response) => {
         this.isLoggedIn.emit(user.email);
         localStorage.setItem('user', JSON.stringify(response.user));
+        this.toastr.success('Logged successfully !', 'Login');
 
         this.userService.getUsers().subscribe((data) => {
           this.userInfo = data
