@@ -37,9 +37,16 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { CalendarComponent } from './calendar/calendar.component';
 
+import {LottieModule} from 'ngx-lottie'
+import player from 'lottie-web'
+
 FullCalendarModule.registerPlugins([
   dayGridPlugin
 ]);
+
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -75,6 +82,7 @@ FullCalendarModule.registerPlugins([
     BrowserAnimationsModule,
     GoogleChartsModule,
     FullCalendarModule ,
+    LottieModule.forRoot({ player: playerFactory }),
     ToastrModule.forRoot({
       progressBar:true,
       preventDuplicates:true

@@ -24,3 +24,8 @@ div.validation-error {
   color: red;
   font-size: 12px;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+}

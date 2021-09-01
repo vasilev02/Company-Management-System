@@ -26,6 +26,8 @@
     "angular-google-charts": "^2.2.2",
     "firebase": "^7.0 || ^8.0",
     "firebase-admin": "^9.11.0",
+    "lottie-web": "^5.7.13",
+    "ngx-lottie": "^7.0.3",
     "ngx-toastr": "^14.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",

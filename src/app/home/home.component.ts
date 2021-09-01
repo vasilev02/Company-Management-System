@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from '../services/user.service';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,19 @@ export class HomeComponent implements OnInit {
     fullName:'',
     uniqueId:''
   }
+
+  optionsLaptopWorking: AnimationOptions = {
+    path: '../assets/laptop-working.json'
+  }
+
+  optionsProgrammerLottie: AnimationOptions = {
+    path: '../assets/programmer.json'
+  }
+
+  optionsConnectionsLottie: AnimationOptions = {
+    path: '../assets/connections.json'
+  }
+
   isLoggedIn: boolean = localStorage.getItem('user') ? true : false;
 
   constructor(private userService: UserService, private router: Router, private toastr: ToastrService) {}

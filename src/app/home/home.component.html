@@ -1,10 +1,8 @@
 <div *ngIf="!isLoggedIn">
   <article class="site-header">
   <section class="site-header-image-wrapper">
-    <img
-      src="https://res.cloudinary.com/defiefioi/image/upload/v1627043563/CMS/man-working_xgpukm.png"
-      alt="Man Working"
-    />
+    <ng-lottie [options]=optionsLaptopWorking>
+    </ng-lottie>
   </section>
   <section class="site-header-title">
     <h2 class="title-size">
@@ -40,6 +38,9 @@
   <a routerLink="/login" class="btn">Check</a>
 </article>
 
+<ng-lottie [options]=optionsConnectionsLottie>
+</ng-lottie>
+
 <article class="take-part">
   <h2 class="title-size">Do you have any questions ?</h2>
 
@@ -61,14 +62,17 @@
 </article>
 </div>
 
-
 <article *ngIf="isLoggedIn" class="home">
   <h2>Welcome, <span class="inner-text">{{userData.fullName}}</span> !</h2>
   <a class="btn" routerLink='/calendar'>Calendar</a>
   <section class="home-image-wrapper">
-    <img
-      src="https://res.cloudinary.com/defiefioi/image/upload/v1627115323/CMS/working-blocks_lymnzx.png"
-      alt="People Working On Blocks"
-    />
+    <ng-lottie [options]=optionsProgrammerLottie>
+    </ng-lottie>
   </section>
 </article>
+
+<script>
+  $(".alert").alert('close')
+</script>
+
+

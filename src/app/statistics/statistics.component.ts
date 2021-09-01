@@ -3,6 +3,7 @@ import { ChartType, Row } from "angular-google-charts"
 import { RoleService } from '../services/role.service';
 import { TaskService } from '../services/task.service';
 import { UserService } from '../services/user.service';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-statistics',
@@ -23,6 +24,9 @@ export class StatisticsComponent implements OnInit {
     minorTicks: 5
   };
 
+  optionsStatistics: AnimationOptions = {
+    path: '../assets/statistics.json'
+  }
 
   constructor(private roleService: RoleService, private userService: UserService , private taskService: TaskService) { }
 

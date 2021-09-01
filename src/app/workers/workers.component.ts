@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { User } from '../shared/user.model';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-workers',
@@ -12,6 +13,10 @@ export class WorkersComponent implements OnInit {
   list!: User[];
   searchText: string = '';
   constructor(private userService: UserService, private route: Router) {}
+
+  optionsLoading: AnimationOptions = {
+    path: '../assets/loading.json'
+  }
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe((actionArray) => {

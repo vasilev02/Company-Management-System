@@ -75,7 +75,7 @@
     <button type="submit" value="submit">Submit</button>
   </form>
 
-  <article class="tasks">
+  <article *ngIf="tasksList" class="tasks">
     <div class="modal" *ngFor="let task of tasksList">
       <a *ngIf="isAdmin" (click)="deleteTask(task.uniqueId,task.title)" class="close-ribbon">&times;</a>
       <div class="modal-content">
@@ -88,4 +88,6 @@
       </div>
     </div>
   </article>
+
+
 </body>

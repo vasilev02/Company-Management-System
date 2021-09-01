@@ -10,9 +10,11 @@
     />
     <button (click)="searchText = ''">X</button>
   </form>
+    
+  
 </article>
 
-<article class="lectors">
+<article *ngIf="list" class="lectors">
   <section *ngFor="let user of list" class="lector">
     <section class="inner-section-info" *ngIf="filterCondition(user)">
 
@@ -28,3 +30,7 @@
     </section>
   </section>
 </article>
+
+<section class="loading" *ngIf="!list">
+  <ng-lottie [options]="optionsLoading"></ng-lottie>
+</section>
